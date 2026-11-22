@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Milo Wearn">
+        <title>Dungeon Loot Splitter</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Dungeon Loot Splitter</h1>
+        </header>
+        <!-- main is the container for the grid -->
+        <main>
+            <!-- party setup -->
+            <section class="party-setup">
+                <h2>Party Setup</h2>
+                <label for="party-num">Number of Party Members:</label>
+                <input type="number" id="party-num" name="party-num" step="1" value="0">
+                <!-- errors all appear simultaneously as <p> -->
+                <div id="party-error">
+                </div>
+            </section>
+
+            <!-- add loot -->
+            <section class="loot-add">
+                <h2>Add Loot</h2>
+                <label for="lootName">Loot Name:</label>
+                <input type="text" id="lootName" name="loot-name"><br>
+                <label for="lootValue">Loot Value:</label>
+                <input type="number" id="lootValue" name="loot-value" step="1" value="0"><br>
+                <button id="loot-add-button">Add Loot</button>
+                <div id="add-error">
+                </div>
+            </section>
+
+            <!-- loot list -->
+            <section class="list-loot">
+                <h2>Loot List</h2>
+                <div id="loot-list">
+                </div>
+                <p id="total-holder-list">Total Loot: 0</p>
+            </section>
+
+            <!-- split loot -->
+            <section class="loot-split">
+                <h2>Split Loot</h2>
+                <div id="split-log">
+                </div>
+                <button id="loot-split-button">Split Loot</button>
+                <div id="split-error">
+                </div>
+                <p id="total-holder-split">Total Loot: -</p>
+                <p id="loot-per-member-holder"></p>
+            </section>
+
+            <section class="reflection">
+                <h2>Logic Explanation</h2>
+                <p>WIP</p>
+            </section>
+        </main>
+    </body>
+</html>

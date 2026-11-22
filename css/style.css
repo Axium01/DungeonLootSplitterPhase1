@@ -1,0 +1,108 @@
+body {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: bisque;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+button {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+section > h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+label {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+input {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.party-setup {
+    background-color: rgb(199, 210, 168);
+    border-radius: 5px;
+}
+
+.loot-add {
+    background-color: rgb(199, 210, 168);
+    border-radius: 5px;
+}
+
+.list-loot {
+    background-color: rgb(199, 210, 168);
+    border-radius: 5px;
+}
+
+.loot-split {
+    background-color: rgb(199, 210, 168);
+    border-radius: 5px;
+}
+
+#loot-split-button {
+    margin-top: 5px;
+}
+
+#loot-add-button, #loot-split-button {
+    width: 50%;
+    height: 25px;
+}
+
+#party-error, #add-error, #split-error {
+    background-color: gainsboro;
+    border-radius: 5px;
+    text-align: center;
+    color:maroon;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#loot-list {
+    height: 200px;
+    overflow-y: auto;
+    background-color: gainsboro;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#split-log {
+    margin-top: 5px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: gainsboro;
+    border-radius: 5px;
+}
+
+#split-log > p {
+    margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .reflection {
+        grid-column: span 2;
+    }
+}
