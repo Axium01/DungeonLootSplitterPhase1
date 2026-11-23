@@ -40,7 +40,7 @@ function renderLoot() {
     Container.innerHTML = ""; // clean container out
     for (let i = 0; i < Loot.length; i++) {
         let line = document.createElement("p");
-        line.textContent = "Name: " + Loot[i].name + ", Value: $" + Loot[i].value;
+        line.textContent = "Loot: " + Loot[i].name + " ($" + Number(Loot[i].value).toFixed(2) + ")";
         Container.appendChild(line);
         total++;
     }
@@ -66,7 +66,6 @@ function renderSplit(party) {
             let loot = document.createElement("p");
             loot.textContent = "Loot: " + party[i].lootGiven[j];
             Container.appendChild(loot);
-            
             total++;
         }
 
