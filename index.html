@@ -58,7 +58,18 @@
 
             <section class="reflection">
                 <h2>Logic Explanation</h2>
-                <p>WIP</p>
+                <p>After the page loads (specifically for the event listeners), the Loot array is initialized as an empty array with nothing in it.</p>
+                <p>If the input in the Add Loot section is valid when the user adds loot with the Add Loot button, a new element with the data given (in the format {name: "x", value: y}) is made and pushed to the end of the array. Otherwise, an error is rendered.</p>
+                <p>After adding the loot, renderLoot() is run. If the user has previously split loot successfully, then the splitLoot() function is also run.</p>
+                <p>For rendering the array in the Loot List section, a for loop is used to simply go through the array while appending paragraph elements to the list container.</p>
+                <p>Paragraph elements added to said container are in the form of "Loot: x ($y)".</p>
+                <p>To get the total amount of the loot elements, a variable is used to keep track of how many times the previously mentioned for loop has run.</p>
+                <p>Splitting loot checks the party setup section and the Loot array.</p>
+                <p>If the input in the party setup section is less than 1 or not an number, or if there are no elements in the Loot array, then an error is rendered in the loot split section.</p>
+                <p>After the checks are made, the function uses an array (which is initialized at the start of the function) to distribute loot to the party, with equal value for each being prioritized.</p>
+                <p>Rendering the newly made array to the split loot section works mostly the same as rendering to the loot list, although another for loop is used to go through a party member's loot items so all of them are displayed properly.</p>
+                <p>Rendering the split loot works in this order: Member # > Loot (may take up multiple lines) > Member Total Value > hr > Member #...</p>
+
             </section>
         </main>
     </body>
